@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html></html>
+<script>
+var xhr = new XMLHttpRequest();
+
+xhr.open('GET', 'https://memoryleaks.ir');
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+            console.log(xhr.responseText);
+
+        } else {
+            console.error('Requet faild with status:', xhr.status);
+        }
+    }
+};
+
+xhr.send();
+</script>
+<iframe id="inlineFrameExample" title="Inline Frame Example" width="300" height="200" src="https://memoryleaks.ir"></iframe>
+</html>
